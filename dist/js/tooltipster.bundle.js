@@ -925,7 +925,7 @@ $.Tooltipster.prototype = {
 			}
 		};
 		
-		while ($parent[0].tagName.toLowerCase() != 'html') {
+		while ($parent[0] && $parent[0].tagName.toLowerCase() != 'html') {
 			
 			if ($parent.css('position') == 'fixed') {
 				geo.origin.fixedLineage = true;
@@ -3296,6 +3296,7 @@ function transitionSupport() {
 // we'll return jQuery for plugins not to have to declare it as a dependency,
 // but it's done by a build task since it should be included only once at the
 // end when we concatenate the core file with a plugin
+
 // sideTip is Tooltipster's default plugin.
 // This file will be UMDified by a build task.
 

@@ -903,7 +903,7 @@ $.Tooltipster.prototype = {
 			}
 		};
 		
-		while ($parent[0].tagName.toLowerCase() != 'html') {
+		while ($parent[0] && $parent[0].tagName.toLowerCase() != 'html') {
 			
 			if ($parent.css('position') == 'fixed') {
 				geo.origin.fixedLineage = true;
